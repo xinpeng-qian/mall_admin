@@ -1,0 +1,58 @@
+.home {
+  .menu-list {
+    width: 180px;
+    position: fixed;
+    height: 100%;
+    z-index: 99;
+    .ant-menu {
+      height: 100%;
+    }
+  }
+  .main-app {
+    margin-left: 180px;
+    transition: all 0.3s;
+    &.menu-unfold {
+      margin-left: 80px;
+    }
+    .main-header {
+      height: 50px;
+      line-height: 50px;
+      box-shadow: 1px 1px 10px #eee;
+      padding-left: 10px;
+      padding-right: 15px;
+      .breadcrumbs {
+        display: inline-block;
+        margin-left: 20px;
+      }
+      .user-info {
+        float: right;
+        cursor: pointer;
+        text-align: center;
+        li {
+          width: 80px;
+          &:not(:first-child) {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            height: 35px;
+            line-height: 35px;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px #ccc;
+          }
+          &:first-child {
+            // margin-bottom: 5px;
+          }
+          &:hover {
+            background: #eee;
+          }
+          i {
+            font-size: 12px;
+          }
+        }
+        &:hover li {
+          display: block;
+        }
+      }
+    }
+  }
+}
